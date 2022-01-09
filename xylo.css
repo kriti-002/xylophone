@@ -1,0 +1,29 @@
+.c{
+	height: 88px;
+	border-style: none;
+	color: white;
+	font-size: 50px;
+}
+.c:focus {
+    outline: none !important;
+    border: none !important;
+}
+.violet{
+	background: #6f42c1;
+}
+.violet:hover{
+	background: #56329a;
+}
+.indigo{
+	background: #6610f2;
+}
+.indigo:hover{
+	background: #510ac2;
+}
+.orange{
+	background: #fd7e14;
+
+}
+.orange:hover{
+	background: #ca5c02;
+}

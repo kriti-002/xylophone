@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" type="text/css" href="xylo.css"> -->
+	<title>Xylophone</title>
+
+	<!-- CSS Styles start from here -->
+	<style type="text/css">
+		.c{
+	height: 88px;
+	border-style: none;
+	color: white;
+	font-size: 50px;
+}
+.c:focus {
+    outline: none !important;
+    border: none !important;
+}
+.violet{
+	background: #6f42c1;
+}
+.violet:hover{
+	background: #56329a;
+}
+.indigo{
+	background: #6610f2;
+}
+.indigo:hover{
+	background: #510ac2;
+}
+.orange{
+	background: #fd7e14;
+
+}
+.orange:hover{
+	background: #ca5c02;
+}
+</style>
+</head>
+
+<!-- HTML starts from here -->
+<body>
+	<div class="row">
+	<button class="c violet col-sm-12">V</button>
+</div>
+	<div class="row">
+	<button class="c indigo col-sm-12">I</button>
+</div>
+<div class="row">
+	<button class="c col-sm-12 bg-primary">B</button>
+	</div>
+	<div class="row">
+	<button class="c col-sm-12 bg-success">G</button>
+	</div>
+	<div class="row">
+	<button class="c col-sm-12 bg-warning">Y</button>
+</div>
+<div class="row">
+	<button class="c orange col-sm-12">O</button>
+</div>
+<div class="row">
+	<button class="c col-sm-12 bg-danger">R</button>
+</div>
+
+<!-- JavaScript Starts from here -->
+<script type="text/javascript">
+	var n=document.querySelectorAll(".c").length;
+	for (var i =0; i < n; i++) {
+		document.querySelectorAll(".c")[i].addEventListener("click", function(){
+			var q= this.innerHTML;
+			soundsOfXylophone(q);
+		}
+);
+
+	}
+
+document.addEventListener("keypress", function(event){
+		soundsOfXylophone(event.key);
+});
+
+function soundsOfXylophone(character){
+		switch(character){
+			case 'V':
+				var audio1= new Audio("./tunes/note1.wav");
+				audio1.play();
+				break;
+			case 'I':
+				var audio2= new Audio("./tunes/note2.wav");
+				audio2.play();
+				break;
+			case 'B':
+				var audio3= new Audio("./tunes/note3.wav");
+				audio3.play();
+				break;
+			case 'G':
+				var audio4= new Audio("./tunes/note4.wav");
+				audio4.play();
+				break;
+			case 'Y':
+				var audio5= new Audio("./tunes/note5.wav");
+				audio5.play();
+				break;
+			case 'O':
+				var audio6= new Audio("./tunes/note6.wav");
+				audio6.play();
+				break;
+			case 'R':
+				var audio7= new Audio("./tunes/note7.wav");
+				audio7.play();
+				break;
+			default:
+				break;
+		}
+	}
+//JavaScript Ends
+	</script>
+
+
+</body>
+</html>
